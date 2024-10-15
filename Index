@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfie's Portfolio</title>
+    <meta name="description" content="Alfie Lexandra - Full-Stack Developer and Cybersecurity Enthusiast">
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Inline CSS -->
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2em;
+            color: #ffcc00;
+            margin-bottom: 10px;
+            animation: textGlow 2s infinite;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #cccccc;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 1em;
+            color: #ffcc00;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        section p {
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #1a1a1a;
+        }
+
+        #about img {
+            width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: #1f1f1f;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skill-item {
+            background-color: #2a2a2a;
+            margin: 10px;
+            padding: 20px;
+            width: 150px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-item img {
+            width: 60px;
+            margin-bottom: 10px;
+        }
+
+        .skill-item p {
+            font-size: 0.9em;
+            color: #ffcc00;
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: #1a1a1a;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-item {
+            background-color: #2a2a2a;
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .project-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+
+        .project-item p {
+            font-size: 0.9em;
+            color: #cccccc;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #1f1f1f;
+        }
+
+        .contact-container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-item img {
+            width: 30px;
+            margin-right: 15px;
+        }
+
+        .contact-item a {
+            font-size: 1em;
+            color: #ffcc00;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #ffffff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            color: #cccccc;
+        }
+
+        /* Animations */
+        @keyframes textGlow {
+            0%, 100% {
+                text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+            }
+            50% {
+                text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .skill-item, .project-item {
+                width: 90%;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Alfie Lexandra</h1>
+        <p>Full-Stack Developer & Cybersecurity Enthusiast</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBVzfKNiHBvxOv7O6m3Y8PAqrJvg0UZNmCWQ&s" alt="Alfie's Profile Picture">
+        <h2>About Me</h2>
+        <p>Hello! I'm Alfie Lexandra, a passionate full-stack developer and cybersecurity enthusiast based in Indonesia. With a love for technology and problem-solving, I enjoy creating innovative solutions and learning new skills. In my free time, I explore game development and contribute to open-source projects.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <!-- Skill Item -->
+            <div class="skill-item">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-html-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-225995.png?f=webp&w=512" alt="HTML5 Icon">
+                <p>HTML5</p>
+            </div>
+            <!-- Skill Item -->
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS3 Icon">
+                <p>CSS3</p>
+            </div>
+            <!-- Skill Item -->
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Icon">
+                <p>JavaScript</p>
+            </div>
+            <!-- Skill Item -->
+            <div class="skill-item">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-react-icon-download-in-svg-png-gif-file-formats--logo-brand-logos-pack-company-icons-1597591.png?f=webp&w=512" alt="React Icon">
+                <p>React</p>
+            </div>
+            <!-- Skill Item -->
+            <div class="skill-item">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-node-js-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-5-pack-logos-icons-3030179.png?f=webp&w=512" alt="Node.js Icon">
+                <p>Node.js</p>
+            </div>
+            <!-- Skill Item -->
+            <div class="skill-item">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-python-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226051.png?f=webp&w=512" alt="Python Icon">
+                <p>Python</p>
+            </div>
+            <!-- Skill Item-->
+            <div class="skill-item" >
+            	<img src="https://cdn.iconscout.com/icon/free/png-512/free-c-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-freebies-pack-logos-icons-1175191.png?f=webp&w=512" alt="C Icon" >
+            	<p>C</p>
+            </div>
+            <!-- Skill Item-->
+            <div class="skill-item" >
+            	<img src="https://cdn.iconscout.com/icon/free/png-512/free-c-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226082.png?f=webp&w=512" alt="Cpp-Icon" >
+            	<p>C++</p>
+            </div>
+            <!-- Skill Item-->
+            <div class="skill-item" >
+            	<img src="https://cdn.iconscout.com/icon/free/png-512/free-typescript-logo-icon-download-in-svg-png-gif-file-formats--programming-language-logos-pack-icons-1174965.png?f=webp&w=512" alt="Typescript-Icon" >
+            	<p>Typescript</p>
+            </div>
+            <!-- Skill Item-->
+            <div class="skill-item" >
+            	<img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/express-js-5379348-4492470.png?f=webp&w=512" alt="Express-Icon" >
+            	<p>Express</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <!-- Project Item -->
+            <div class="project-item">
+                <img src="https://via.placeholder.com/300x150" alt="Project Image">
+                <h3>Project One</h3>
+                <p>A web application that allows users to track their tasks and increase productivity.</p>
+            </div>
+            <!-- Project Item -->
+            <div class="project-item">
+                <img src="https://via.placeholder.com/300x150" alt="Project Image">
+                <h3>Project Two</h3>
+                <p>An e-commerce platform built with React and Node.js, featuring real-time data updates.</p>
+            </div>
+            <!-- Project Item -->
+            <div class="project-item">
+                <img src="https://via.placeholder.com/300x150" alt="Project Image">
+                <h3>Project Three</h3>
+                <p>A mobile app developed with React Native, providing users with personalized fitness plans.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <!-- Contact Item -->
+            <div class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon">
+                <a href="https://instagram.com/alluxndra" target="_blank">Instagram</a>
+            </div>
+            <!-- Contact Item -->
+            <div class="contact-item">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-github-logo-icon-download-in-svg-png-gif-file-formats--social-media-pack-logos-icons-721954.png?f=webp&w=512" alt="LinkedIn Icon">
+                <a href="https://github.com/alfielexa" target="_blank">Github</a>
+            </div>
+            <!-- Contact Item -->
+            <div class="contact-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon">
+                <a href="mailto:alfielexa@proton.me">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Alfie Lexandra. All rights reserved.</p>
+    </footer>
+
+    <!-- Inline JavaScript -->
+    <script>
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))
+                        .scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Skill Item Hover Effect
+        const skillItems = document.querySelectorAll('.skill-item');
+        skillItems.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.backgroundColor = '#ffcc00';
+                item.querySelector('p').style.color = '#1a1a1a';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.backgroundColor = '#2a2a2a';
+                item.querySelector('p').style.color = '#ffcc00';
+            });
+        });
+
+        // Project Item Hover Effect
+        const projectItems = document.querySelectorAll('.project-item');
+        projectItems.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.backgroundColor = '#ffcc00';
+                item.querySelector('h3').style.color = '#1a1a1a';
+                item.querySelector('p').style.color = '#1a1a1a';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.backgroundColor = '#2a2a2a';
+                item.querySelector('h3').style.color = '#ffcc00';
+                item.querySelector('p').style.color = '#cccccc';
+            });
+        });
+    </script>
+</body>
+</html>
